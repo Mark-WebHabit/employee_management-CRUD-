@@ -1,0 +1,264 @@
+.container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header{
+    display: flex;
+    padding: 1em;
+    align-items: center;
+}
+
+h3{
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--orange);
+    scale: 1.1;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    font-size: 1.2rem;
+}
+
+.users-container{
+    flex:1 ;
+    display: grid;
+    place-items: center;
+}
+
+.users-wrapper{
+    width: 700px;
+    height: 500px;
+    background-color: var(--light-dark);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.user-list-header{
+    display: flex;
+    margin: 0.5em 1em;
+    margin-bottom: 2em;
+    justify-content: space-between;
+}
+
+.add-user{
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.4em 0.6em;
+    background-color: var(--dark);
+    cursor: pointer;
+    
+}
+.add-user i{
+    font-size: 1.5rem;
+}
+.add-user span{
+    font-size: 1rem;
+}
+
+.add-user:hover i, .add-user:hover span{
+    color: var(--dark);
+}
+.add-user:hover{
+    background-color: var(--rice);
+}
+
+#search-user{
+    display: block;
+    border: none;
+    background-color: var(--rice);
+    padding-left: 0.4em;
+    width: 30%;
+    font-size: 1.2rem;
+    color: var(--dark)
+}
+#search-user:focus{
+    outline: none;
+}
+
+.user-list{
+    flex: 1;
+    overflow: scroll;
+}
+
+#end-of-list{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1em 0;
+}
+
+.add-user-modal, .edit-user-modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    place-items: center;
+    display: none;
+}
+
+.add-user-modal form, .wrapper-edit{
+    background-color: var(--light-dark);
+    padding: 1em;
+    width: 500px;
+    position: relative;
+    top: -150%;
+}
+
+.user-input-container{
+    display: flex;
+    gap: 1em;
+    width: 80%;
+    margin: 1em auto;
+    align-items: center;
+}
+
+h4{
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.user-input-container input{
+    flex: 1;
+    padding: 0.5em 0;
+    padding-left: 0.6em;
+    border: none;
+    background-color: var(--rice);
+    outline: none;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+.user-input-container input:hover{
+    outline: none;
+}
+
+.user-input-container label i {
+    font-size: 1.5rem;
+}
+
+.button-container{
+    width: 80%;
+    margin: 0% auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em
+}
+
+.button-container button{
+    width: 100px;
+    padding: 0.4em 0;
+    border: 1px solid transparent;
+    background-color: var(--rice);
+    color: var(--dark);
+    font-weight: 600;
+    cursor: pointer
+}
+.button-container button:hover{
+    background-color: var(--dark);
+    color: var(--rice);
+}
+
+.add-user-error{
+    text-align: center;
+    color: var(--error);
+    margin-bottom: 1em;
+}
+
+.user{
+    display: flex;
+    border: 1px solid var(--dark);
+    justify-content: space-between;
+    padding: 0.7em 1em;
+    border-top-color: transparent;
+}
+.user:first-child{
+    border-top-color: var(--dark);
+}
+
+.user .username{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.button-list-container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.button-list-container button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.button-list-container button i{
+    font-size: 1.4rem;
+    color: var(--error);
+}
+
+.button-list-container button:last-child i{
+    color: green;
+}
+
+.wrapper-edit{
+    padding: 2em;
+    background-color: var(--light-dark);
+    width: 400px;
+    border-radius: 1em;
+    position: relative;
+}
+
+.wrapper-edit input{
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.4em 0;
+    padding-left: 0.4em;
+    color: var(--dark);
+    border: none;
+    outline: none;
+}
+
+.wrapper-edit input:hover{
+    outline: none;
+}
+.wrapper-edit .edit-button-container{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    margin-top: 1em;
+}
+.edit-button-container button{
+    width: 100px;
+    padding: 0.4em 0;
+    color: var(--dark);
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.edit-button-container button:hover{
+    color: var(--rice);
+    background-color: var(--dark);
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* color palette */
+
+:root{
+    --dark: #131313;
+    --light-dark: #252525;
+    --gray: #3e3e3e;
+    --rice: #f6f8ed;
+    --error: red;
+    --orange: #FFA500;
+}
+
+/* set everything to default and assign font preference for all elements */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    color: var(--rice);
+    transition: all 200ms;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+    background-color: var(--dark);
+}
